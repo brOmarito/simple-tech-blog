@@ -1,0 +1,31 @@
+{
+  "name": "simple-tech-blog",
+  "version": "1.0.0",
+  "description": "A tech blog that handles basic posts, profiles, and comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brOmarito/simple-tech-blog.git"
+  },
+  "author": "brOmarito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brOmarito/simple-tech-blog/issues"
+  },
+  "homepage": "https://github.com/brOmarito/simple-tech-blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "connect-session-sequelize": "^7.0.4",
+    "sequelize": "^6.3.5"
+  }
+}
