@@ -1,0 +1,12 @@
+.header-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-sect {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.content-section {
+    margin: 1.5rem 0;
+}
