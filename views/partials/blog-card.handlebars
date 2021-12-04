@@ -1,3 +1,18 @@
 <div class="row g-5 pt-2">
-    <p>Hello world</p>
+    <article class="blog-post">
+        <h2 class="blog-post-title">{{title}}</h2>
+        <p class="blog-post-meta">{{format_datetime createdAt}} by {{user.username}}</p>
+        <p>{{content}}</p>
+        {{#if comments.length}}
+            <hr>
+        {{/if}}
+        <div class="comments-section">
+            {{#if comments.length}}
+                <h2>Comments</h2>
+                {{#each comments as |comment|}}
+                    {{> comment-slot}}
+                {{/each}}
+            {{/if}}
+        </div>
+    </article>
 </div>

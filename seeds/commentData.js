@@ -13,7 +13,7 @@ const commentData = [
     },
     {
         content: 'Thanks for the comments!',
-        user_id: 3,
+        user_id: 1,
         post_id: 1,
     },
 ]

@@ -10,3 +10,57 @@
 .content-section {
     margin: 1.5rem 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
+}
+
+.blog-header-logo:hover {
+    text-decoration: none;
+}
+
+hr {
+    border-radius: 10px;
+}
+
+.comments-section hr {
+    color: #9191916e;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post {
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.row:nth-child(even) .blog-post,
+.form-signin {
+    background-color: rgba(226, 226, 226, 0.438);
+}
+
+.form-signin {
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.form-signin form,
+.form-register form {
+    margin-bottom: 2em;
+}
+
+.form-register button {
+    margin-top: 2em;
+}
