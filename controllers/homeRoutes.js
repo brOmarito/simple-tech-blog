@@ -3,7 +3,7 @@ const { Post, Comment, User } = require('../models');
 
 const renderPosts = async (req, res) => {
     const postData = await Post.findAll({
-        attributes: ['title', 'content', 'createdAt'],
+        attributes: ['id', 'title', 'content', 'createdAt'],
         include: [
             {
                 model: Comment,
@@ -22,23 +22,25 @@ const renderPosts = async (req, res) => {
             }
         ]
     });
+    const loggedIn = req.session.user_id ? true : false;
     const cleanedPosts = postData.map((post) => {
-        const plainPost = post.get({ plain: true });
-        const commentData = post.comments.map((comment) => comment.get({ plain: true }));
-        plainPost.comments = commentData;
-        return plainPost;
+        const postObj = post.get({ plain: true });
+        postObj.loggedIn = loggedIn;
+        return postObj;
     });
-    res.render('homepage', { posts: cleanedPosts });
+    res.render('homepage', { posts: cleanedPosts, loggedIn: loggedIn });
 }
 
 router.get('/', renderPosts);
 
 router.get('/login', async (req, res) => {
-    res.render('login');
+    const loggedIn = req.session.user_id ? true : false;
+    res.render('login', { loggedIn: loggedIn });
 });
 
 router.get('/register', async (req, res) => {
-    res.render('register');
+    const loggedIn = req.session.user_id ? true : false;
+    res.render('register', { loggedIn: loggedIn });
 });
 
 module.exports = router;

@@ -1,6 +1,6 @@
 <div class="row g-5 pt-2">
     <article class="blog-post">
-        <h2 class="blog-post-title">{{title}}</h2>
+        <a class="blog-post-title" href="/post/{{id}}">{{title}}</a>
         <p class="blog-post-meta">{{format_datetime createdAt}} by {{user.username}}</p>
         <p>{{content}}</p>
         {{#if comments.length}}
@@ -14,5 +14,10 @@
                 {{/each}}
             {{/if}}
         </div>
+        {{#if loggedIn}}
+            <a class="add-comment" href="/post/comment/{{id}}">+ Add Comment</a>
+        {{else}}
+            <a class="add-comment" href="/login">Login to add a Comment</a>
+        {{/if}}
     </article>
 </div>
