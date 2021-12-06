@@ -1,7 +1,13 @@
 <div class="row g-5 pt-2">
     <article class="blog-post">
         <a class="blog-post-title" href="/post/{{id}}">{{title}}</a>
-        <p class="blog-post-meta">{{format_datetime createdAt}} by {{user.username}}</p>
+        <p class="blog-post-meta">
+            {{format_datetime createdAt}} by {{user.username}}
+            {{#if userPost}}
+                <a class="meta-actions delete-link" href="/api/post/{{id}}">Delete</a>
+                <a class="meta-actions" href="/post/update/{{id}}">Update</a>
+            {{/if}}
+        </p>
         <p>{{content}}</p>
         {{#if comments.length}}
             <hr>

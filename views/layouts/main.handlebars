@@ -21,7 +21,12 @@
                 <div class="col-4 text-center">
                     <a class="blog-header-logo text-dark header-text" href="/">Tech Blog</a>
                 </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="col-2 d-flex justify-content-end align-items-center">
+                    {{#if loggedIn}}
+                        <a id="dashboard" class="link-secondary" href="/dashboard">Dashboard</a>
+                    {{/if}}
+                </div>
+                <div class="col-2 d-flex justify-content-end align-items-center">
                     {{#if loggedIn}}
                         <a id="logout" class="btn btn-sm btn-outline-secondary" href="/">Logout</a>
                     {{else}}

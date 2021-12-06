@@ -80,18 +80,23 @@ hr {
     margin-bottom: 1rem;
 }
 
-.form-post-create textarea,
-.form-add-comment textarea {
+.blog-form textarea {
     min-height: 10rem;
     margin-bottom: 2em;
 }
 
-.add-comment {
+.add-comment,
+.meta-actions {
     float: right;
     color: rgb(83, 83, 83);
 }
 
-.add-comment:hover {
+.meta-actions {
+    padding-left: 1rem;
+}
+
+.add-comment:hover,
+.meta-actions:hover {
     color: rgb(121, 121, 121);
     text-decoration: none;
 }
