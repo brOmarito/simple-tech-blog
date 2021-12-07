@@ -10,6 +10,8 @@ It was a great exercise connecting the front-end to the back-end as well as star
 ## Improvements
 I had some issues with ordering the posts and the comments which I would love to resolve in the future. Aside from that, potentially flesh out a profile page and add some more functionality there.
 
+## Deployed Link
+Check out the deployed app here: https://intense-castle-95951.herokuapp.com/
 ## Screenshots
 ![Screenshot of the home page without logging in](./assets/images/logged-out-home.PNG)
 ![Screenshot of the home page after logging in](./assets/images/logged-in-home.PNG)
