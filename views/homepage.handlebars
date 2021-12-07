@@ -1,4 +1,6 @@
-<h3 class="pb-4 fst-italic border-bottom">What's new in tech?</h3>
+<div class="row">
+    <h3 class="pb-4 fst-italic border-bottom">What's new in tech? {{#unless loggedIn}}<span class="login-header">(Login to get blogging!)</span>{{/unless}}</h3>
+</div>
 {{#each posts as |post|}}
     {{> blog-card}}
 {{/each}}

@@ -112,3 +112,9 @@ hr {
 .blog-header {
     padding: 1rem 5rem;
 }
+
+.login-header {
+    float: right;
+    color: rgb(155, 155, 155);
+    font-size: 1.25rem;
+}
