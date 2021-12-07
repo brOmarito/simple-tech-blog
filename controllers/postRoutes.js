@@ -8,7 +8,6 @@ const getPostInfo = async (postId) => {
         include: [
             {
                 model: Comment,
-                order: ['createdAt', 'ASC'],
                 attributes: ['content', 'createdAt'],
                 include: [
                     {
@@ -21,7 +20,11 @@ const getPostInfo = async (postId) => {
                 model: User,
                 attributes: ['username'],
             }
-        ]
+        ],
+        // order: [
+        //     ['post', 'createdAt', 'ASC'],
+        //     ['comments', 'createdAt', 'ASC']
+        // ],
     });
 }
 

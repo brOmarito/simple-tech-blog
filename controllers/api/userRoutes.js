@@ -16,7 +16,6 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-    console.log("Made it in the login API");
     const { email, password } = req.body;
     try {
         const userData = await User.findOne({
@@ -25,14 +24,12 @@ router.post('/login', async (req, res) => {
             },
         });
         if (!userData.checkPassword(password)) {
-            console.log("Password fail");
             res.status(404).json({message: "The email or passwor is incorrect."});
             return;
         }
 
         req.session.save(() => {
             req.session.user_id = userData.id;
-            console.log(req.session.user_id);
             res.status(200).json({ user: userData, message: "Successfully logged in!" });
         });
     } catch (error) {

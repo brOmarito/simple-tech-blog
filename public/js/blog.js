@@ -22,7 +22,6 @@ const runDelete = async (event) => {
 const deleteEls = document.querySelectorAll('.delete-link');
 if (deleteEls && deleteEls.length) {
     deleteEls.forEach(element => {
-        console.log(element);
         element.addEventListener('click', runDelete)
     });
 }

@@ -2,8 +2,8 @@ const { Post } = require('../models');
 
 const postData = [
     {
-        title: 'Building Shit',
-        content: 'Sometimes you just have to build some shit. And then get it working.',
+        title: 'Building Stuff',
+        content: 'Sometimes you just have to build some stuff. And then get it working.',
         user_id: 1
     },
     {
@@ -13,7 +13,7 @@ const postData = [
     },
     {
         title: 'My thoughts on WoW',
-        content: 'They need to stop bullshittin and get their shit together!',
+        content: 'They need to stop messing around and get their stuff together!',
         user_id: 3
     },
 ]

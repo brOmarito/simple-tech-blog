@@ -37,7 +37,6 @@ const renderPosts = async (user_id, where) => {
 router.get('/', async (req, res) => {
     const loggedIn = req.session.user_id ? true : false;
     const cleanedPosts = await renderPosts(req.session.user_id, {});
-    console.log(cleanedPosts);
     res.render('homepage', { posts: cleanedPosts, loggedIn: loggedIn });
 });
 
@@ -47,7 +46,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
         user_id: req.session.user_id,
     };
     const cleanedPosts = await renderPosts(req.session.user_id, where);
-    console.log(cleanedPosts);
     res.render('homepage', { posts: cleanedPosts, loggedIn: loggedIn });
 });
 
