@@ -12,6 +12,7 @@ I had some issues with ordering the posts and the comments which I would love to
 
 ## Deployed Link
 Check out the deployed app here: https://intense-castle-95951.herokuapp.com/
+
 ## Screenshots
 ![Screenshot of the home page without logging in](./assets/images/logged-out-home.PNG)
 ![Screenshot of the home page after logging in](./assets/images/logged-in-home.PNG)
